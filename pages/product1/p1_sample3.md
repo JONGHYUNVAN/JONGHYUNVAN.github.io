@@ -1,5 +1,5 @@
 ---
-title: Sample 3 Topic (Product 1)
+title: 객체
 keywords: sample
 summary: "This is just a sample topic..."
 sidebar: product1_sidebar
@@ -7,14 +7,22 @@ permalink: p1_sample3.html
 folder: product1
 ---
 
-## Sample Content
+## 객체가 뭔데 ? 
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+이제 객체에 대해 좀 더 자세히 알아보자.    
+클래스 설명할때 예로 든 김에 자동차의 예를 한번 더 들자면, 자동차에서 제일 핵심적인 일 하는 친구, 바퀴를 살펴보자.   
+바퀴를 가장 간단하게 설명하면 '동그랗고, 굴러가는거' 라고 설명할 수 있겠다.   
+이때 '동그랗다'는 바퀴가 가진 속성이라 할 수 있고, '굴러간다'는 바퀴의 기능이라 할 수 있는데, 이걸 컴퓨터가 인식하는 입장에서 보면 동그란건 바퀴의 필드(field), 굴러가는건 바퀴의 메소드(method)라 볼 수 있다.   
+자바식 언어로 예를들면    
+String shapeofwheels == "동그라미";   
+int numberofwheels == 4;   
+이런식으로 정의되는게 필드고   
+void daegooldaegool()   
+이런식으로 정의되는게 메소드다.   
 
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 
 
-## More sample content
+## 객체 생성
 
 Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
 
