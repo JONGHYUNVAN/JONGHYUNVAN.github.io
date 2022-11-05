@@ -19,15 +19,75 @@ int numberofwheels == 4;
 이런식으로 정의되는게 필드고   
 void daegooldaegool()   
 이런식으로 정의되는게 메소드다.   
+항상 제일 위에 있는 String void가 뭘 의미히는지도 알면 좋다.
 
 
 
 ## 객체 생성
 
-Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+new 를 쓴다.   
+예를들어
+<pre>
+<code>
+1 Class 참조변수 = new 생성자();
+</code>
+</pre>
+이 코드를 과정별로 쪼개면
+<pre>
+<code>
+1 Class 참조변수;
+2 참조변수 = new 생성자();
+</code>
+</pre>
+이 코드를 읽고 컴퓨터는       
+1번에서 Class 타입의 참조변수를 선언하고,   
+2번에서 생성자를 통해 인스턴스를 생성하여 참조변수에 할당한다.   
+참조 변수는 쉽게말해 '어디있는 정보인가?'를 가리키는 변수다.   
+그럼 정보는 어디있나? 의문이 생기는데 데이터는 '힙(heap) 메모리'라는데 쓰인다.  
+힙 메모리는 CPU가 자동으로 필요한만큼 할당하고 해제하는 영역이다.  
+그렇다면 나머지들은 어디 저장되냐?   
+Class는 클래스 영역, 참조변수는 스택 영역에 저장된다.   
+어디 저장하는지가 왜 중요한가?   
+어떤 객체/값이 어디까지 적용되는지가 결정되기 때문이다.
 
-The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+## 사용예시
+<pre>
+<code>
+public class Periodic table {
+    public static void main(String[] args) {
+         element Hydrogen = new Hydrogen(1, 1, 1); // 객체 생성. 
 
-There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+        System.out.println("Hydrogen is " + Hydrogen.family + "족이고 " + "원자번호는 " + Hydrogen.atomicnumber + "입니다."); // 필드 호출
+        Hydrogen.numberofprotons(); // 메서드 호출
+        Hydrogen.numberofelectrons();
+        Hydrogen.Valenceelectron();
+    }
+}
 
+class Hydrogen {
+    public int numberofprotons; // 필드 선언
+    public int numberofelectrons;
+
+    public Hydrogen(int numberofprotons, int numberofelectrons) {
+        this.numberofprotons = 1;
+        this.numberofelectrons = 1;
+    }
+
+    void numberofprotons() { // 메서드 선언
+        System.out.println(numberofprotons+"개의 양성자가 있습니다.");
+    }
+
+    void numberofelectrons() {
+        System.out.println(numberofelectrons+"개의 전자가 있습니다.");
+    }
+
+    void Valenceelectron(){
+        int VE=numberofelectrons;
+        while(VE>5){VE-=8}
+        System.out.println(VE+"개의 최외각전자가 있습니다.");
+    }
+}
+
+</code>
+</pre>
 {% include links.html %}
